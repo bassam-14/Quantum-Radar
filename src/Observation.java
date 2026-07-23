@@ -1,11 +1,11 @@
 public class Observation {
     private final String plateNumber;
     private final String date; 
-    private final String carType;
+    private final CarType carType;
     private final int speed;
     private final boolean seatbeltFastened;
 
-    public Observation(String plateNumber, String date, String carType, int speed, boolean seatbeltFastened) {
+    public Observation(String plateNumber, String date, CarType carType, int speed, boolean seatbeltFastened) {
         this.plateNumber = plateNumber;
         this.date = date;
         this.carType = carType;
@@ -15,7 +15,7 @@ public class Observation {
 
     public String getPlateNumber() { return plateNumber; }
     public String getDate() { return date; }
-    public String getCarType() { return carType; }
+    public CarType getCarType() { return carType; }
     public int getSpeed() { return speed; }
     public boolean isSeatbeltFastened() { return seatbeltFastened; }
 }
