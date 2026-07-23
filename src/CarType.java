@@ -1,5 +1,5 @@
 public enum CarType {
-    PRIVATE,
-    TRUCK,
-    BUS
+    Private,
+    Truck,
+    Bus
 }
