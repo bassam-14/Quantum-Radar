@@ -17,5 +17,7 @@ public class Violation {
         return description;
     }
 
-   public String getRuleBroken() { return ruleBroken; }
+    public String getRuleBroken() {
+        return ruleBroken;
+    }
 }
