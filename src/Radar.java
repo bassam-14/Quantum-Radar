@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Radar {
     private final List<Rule> rules;
@@ -25,7 +27,27 @@ public class Radar {
         }
     }
 
-    public List<Fine> getRecordedFines(){
+    public List<Fine> getRecordedFines() {
         return recordedFines;
+    }
+
+    public Map<String, Double> getAllFines() {
+        Map<String, Double> fineTotals = new HashMap<>();
+        for (Fine fine : recordedFines) {
+            fineTotals.put(fine.getPlateNumber(),
+                    fineTotals.getOrDefault(fine.getPlateNumber(), 0.0) + fine.getTotalAmount());
+        }
+        return fineTotals;
+    }
+
+    public Map<String, Integer> getViolatedRulesCount() {
+        Map<String, Integer> violationCounts = new HashMap<>();
+        for (Fine fine : recordedFines) {
+            for (Violation v : fine.getViolations()) {
+                String key = v.getRuleBroken();
+                violationCounts.put(key, violationCounts.getOrDefault(key, 0) + 1);
+            }
+        }
+        return violationCounts;
     }
 }
