@@ -1,6 +1,6 @@
 public class Observation {
     private final String plateNumber;
-    private final String date; 
+    private final String date;
     private final CarType carType;
     private final int speed;
     private final boolean seatbeltFastened;
@@ -13,9 +13,23 @@ public class Observation {
         this.seatbeltFastened = seatbeltFastened;
     }
 
-    public String getPlateNumber() { return plateNumber; }
-    public String getDate() { return date; }
-    public CarType getCarType() { return carType; }
-    public int getSpeed() { return speed; }
-    public boolean isSeatbeltFastened() { return seatbeltFastened; }
+    public String getPlateNumber() {
+        return plateNumber;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public CarType getCarType() {
+        return carType;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public boolean isSeatbeltFastened() {
+        return seatbeltFastened;
+    }
 }
